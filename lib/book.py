@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
+
 class Book:
     def __init__(self, title, page_count):
         self.title = title
-        self._page_count = None  # internal variable
-        self.page_count = page_count  # use the property setter
+        self._page_count = None  # internal variable for validation
+        self.page_count = page_count  # call the setter
 
     @property
     def page_count(self):
@@ -17,5 +19,5 @@ class Book:
 
     def turn_page(self):
         print("Flipping the page...wow, you read fast!")
-    
+
         

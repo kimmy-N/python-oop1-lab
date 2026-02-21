@@ -1,12 +1,11 @@
-# lib/coffee.py
+#!/usr/bin/env python3
 
 class Coffee:
     def __init__(self, size, price):
         self._size = None  # internal variable for validation
-        self.size = size   # use setter for validation
+        self.size = size   # call setter
         self.price = price
 
-    # size property with validation
     @property
     def size(self):
         return self._size
@@ -18,7 +17,6 @@ class Coffee:
         else:
             print("size must be Small, Medium, or Large")
 
-    # tip method
     def tip(self):
         print("This coffee is great, here’s a tip!")
         self.price += 1
